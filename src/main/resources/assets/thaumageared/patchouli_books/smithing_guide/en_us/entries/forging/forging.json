@@ -1,0 +1,20 @@
+{
+  "name": "Forging",
+  "icon": "overgeared:iron_sword_blade",
+  "category": "thaumageared:forging",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Lay the pieces on the anvil in the recipe's pattern (as on a crafting table), the blueprint in its slot if the recipe wants one, and right-click with the hammer."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each recipe needs some number of hits. Where the minigame is on, a marker sweeps across a bar: strike when it is in the middle. $(thing)Perfect$() and $(thing)good$() hits raise the quality, $(thing)misses$() lower it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "With $(item)Hands-On Overgeared$() the pieces lie on the anvil itself and you strike in rhythm with the hammer in your hand. Sneak-click for Overgeared's own screen."
+    }
+  ]
+}

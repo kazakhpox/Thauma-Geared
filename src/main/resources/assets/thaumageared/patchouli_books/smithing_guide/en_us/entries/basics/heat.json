@@ -1,0 +1,20 @@
+{
+  "name": "Hot Metal and Tongs",
+  "icon": "overgeared:heated_iron_ingot",
+  "category": "thaumageared:basics",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Most metal is forged hot. Put ingots in a $(item)blast furnace$() (or furnace) to get $(item)heated ingots$(). A heated ingot cools back down after a while, and dropped in water it cools at once."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Hot metal burns the hand that holds it. Hold $(item)tongs$() in the other hand to carry it safely: wooden tongs are made from sticks, iron and steel ones are forged as two halves and joined."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:wooden_tongs"
+    }
+  ]
+}

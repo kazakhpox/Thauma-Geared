@@ -1,0 +1,16 @@
+{
+  "name": "Casting",
+  "icon": "overgeared:casting_furnace",
+  "category": "thaumageared:metals",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Instead of forging, heads can be cast. Make a $(item)clay tool cast$(), fire it in a furnace, fill it by right-clicking it with the metal, then smelt it (or use the $(item)casting furnace$()). Right-click a cast to take its metal back."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:casting_furnace"
+    }
+  ]
+}

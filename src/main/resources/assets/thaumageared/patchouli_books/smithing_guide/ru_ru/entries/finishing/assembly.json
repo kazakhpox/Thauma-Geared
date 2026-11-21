@@ -1,0 +1,16 @@
+{
+  "name": "Сборка инструментов",
+  "icon": "minecraft:iron_pickaxe",
+  "category": "thaumageared:finishing",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Отполированное и закалённое оголовье с палкой на верстаке дают инструмент того же качества. Броня куётся целиком из пластин, а пластины выбиваются из слитков."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:iron_pickaxe"
+    }
+  ]
+}

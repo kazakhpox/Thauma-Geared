@@ -1,0 +1,16 @@
+{
+  "name": "Quality",
+  "icon": "overgeared:iron_pickaxe_head",
+  "category": "thaumageared:forging",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Forged pieces come out $(thing)Poorly$(), $(thing)Well$(), $(thing)Expertly$() or $(thing)Perfectly Forged$(), or as a $(thing)Masterwork$(). Better quality makes better tools and armour, and it carries over from a head to the finished tool."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Some recipes (plates, steel) have no quality: they come out the same however you strike."
+    }
+  ]
+}

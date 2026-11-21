@@ -1,0 +1,24 @@
+{
+  "name": "Blueprints",
+  "icon": "overgeared:empty_blueprint",
+  "category": "thaumageared:forging",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Tool heads need a $(item)blueprint$() of their type (sword, pickaxe, axe...). Draw one on a $(item)drafting table$() from an empty blueprint."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A blueprint caps the quality of what it forges, and it improves as you use it: Poorly, Well, Expertly, Perfectly Designed, Masterwork."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:empty_blueprint"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:drafting_table"
+    }
+  ]
+}

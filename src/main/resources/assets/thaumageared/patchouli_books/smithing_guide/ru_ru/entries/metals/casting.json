@@ -1,0 +1,16 @@
+{
+  "name": "Литьё",
+  "icon": "overgeared:casting_furnace",
+  "category": "thaumageared:metals",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Оголовья можно не ковать, а отлить. Сделайте $(item)глиняную форму$(), обожгите её в печи, заполните (ПКМ металлом по форме) и переплавьте (или используйте $(item)литейную печь$()). ПКМ по форме возвращает металл."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:casting_furnace"
+    }
+  ]
+}

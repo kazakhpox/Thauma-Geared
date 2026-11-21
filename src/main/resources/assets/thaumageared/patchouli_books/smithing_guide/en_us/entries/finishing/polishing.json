@@ -1,0 +1,12 @@
+{
+  "name": "Polishing",
+  "icon": "minecraft:grindstone",
+  "category": "thaumageared:finishing",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A freshly forged head is $(thing)Unpolished$(). Use it on a $(item)grindstone$() to polish it; an unpolished part cannot be made into a tool. The grindstone also grinds a diamond into a $(item)diamond shard$()."
+    }
+  ]
+}

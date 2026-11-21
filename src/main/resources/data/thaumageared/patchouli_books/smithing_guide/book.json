@@ -1,0 +1,9 @@
+{
+  "name": "book.thaumageared.smithing_guide.name",
+  "landing_text": "book.thaumageared.smithing_guide.landing",
+  "i18n": true,
+  "use_resource_pack": true,
+  "version": 1,
+  "model": "patchouli:book_brown",
+  "show_progress": false
+}

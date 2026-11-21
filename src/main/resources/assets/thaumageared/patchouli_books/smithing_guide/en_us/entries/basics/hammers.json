@@ -1,0 +1,20 @@
+{
+  "name": "Smithing Hammers",
+  "icon": "overgeared:smithing_hammer",
+  "category": "thaumageared:basics",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Everything in Overgeared is forged with a $(item)smithing hammer$(). The first one is knapped from stone: right-click stone with $(item)flint$() to chip off $(item)rock$(), hold rock in both hands and knap a stone hammer head, then put it on a stick."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Better hammers come from the anvil: a $(item)copper$() head, and the $(item)steel smithing hammer$() from two heated steel ingots. A hammer only works on anvils and recipes its tier allows: \"Incorrect hammer tier\" means you need a better one."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:smithing_hammer"
+    }
+  ]
+}

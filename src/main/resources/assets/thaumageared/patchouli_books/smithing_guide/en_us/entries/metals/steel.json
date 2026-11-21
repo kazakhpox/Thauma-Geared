@@ -1,0 +1,16 @@
+{
+  "name": "Steel",
+  "icon": "overgeared:steel_ingot",
+  "category": "thaumageared:metals",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Three iron ingots and a coal in an $(item)alloy furnace$() give two $(item)crude steel$(). Heat the crude steel and hammer it on the anvil into a $(item)heated steel ingot$(), then cool it."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:alloy_furnace"
+    }
+  ]
+}

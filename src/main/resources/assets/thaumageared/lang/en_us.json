@@ -1,5 +1,7 @@
 {
   "itemGroup.thaumageared": "Thauma-Geared",
+  "book.thaumageared.smithing_guide.name": "Smithing Guide",
+  "book.thaumageared.smithing_guide.landing": "A smith's notes on Overgeared: hammers and anvils, forging, finishing, metals, and the Arcane Anvil.",
   "item.thaumageared.heated_thaumium_ingot": "Heated Thaumium Ingot",
   "item.thaumageared.thaumium_sword_blade": "Thaumium Sword Blade",
   "item.thaumageared.thaumium_pickaxe_head": "Thaumium Pickaxe Head",

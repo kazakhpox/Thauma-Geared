@@ -1,0 +1,12 @@
+{
+  "name": "Незерские сплавы",
+  "icon": "overgeared:netherite_alloy",
+  "category": "thaumageared:metals",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)Незерская плавильня$() варит сталь быстрее и сплавляет незеритовый лом с золотом в $(item)незеритовый сплав$(), который куётся как остальные металлы."
+    }
+  ]
+}

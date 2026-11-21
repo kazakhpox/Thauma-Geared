@@ -1,0 +1,16 @@
+{
+  "name": "Сталь",
+  "icon": "overgeared:steel_ingot",
+  "category": "thaumageared:metals",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Три железных слитка и уголь в $(item)плавильне сплавов$() дают две $(item)черновые стали$(). Раскалите черновую сталь, проковайте на наковальне в $(item)раскалённый стальной слиток$() и остудите."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:alloy_furnace"
+    }
+  ]
+}

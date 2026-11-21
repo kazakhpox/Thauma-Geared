@@ -1,5 +1,7 @@
 {
   "itemGroup.thaumageared": "Thauma-Geared",
+  "book.thaumageared.smithing_guide.name": "Руководство кузнеца",
+  "book.thaumageared.smithing_guide.landing": "Записки кузнеца об Overgeared: молоты и наковальни, ковка, отделка, металлы и Магическая наковальня.",
   "item.thaumageared.heated_thaumium_ingot": "Раскалённый таумиевый слиток",
   "item.thaumageared.thaumium_sword_blade": "Таумиевый клинок меча",
   "item.thaumageared.thaumium_pickaxe_head": "Таумиевое оголовье кирки",

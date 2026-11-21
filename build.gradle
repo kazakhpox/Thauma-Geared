@@ -71,6 +71,7 @@ dependencies {
         runtimeOnly files('libs/handson_overgeared.jar')
         runtimeOnly "maven.modrinth:diegesis-api:gc2Jh01U"
     }
+    runtimeOnly "maven.modrinth:patchouli:1.21.1-93-neoforge"
     if (file('libs/thaumaturge.jar').exists()) {
         runtimeOnly files('libs/thaumaturge.jar')
     }

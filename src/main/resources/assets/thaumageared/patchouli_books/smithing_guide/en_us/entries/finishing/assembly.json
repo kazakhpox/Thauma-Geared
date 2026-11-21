@@ -1,0 +1,16 @@
+{
+  "name": "Putting Tools Together",
+  "icon": "minecraft:iron_pickaxe",
+  "category": "thaumageared:finishing",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A polished, quenched head and a stick on a crafting table make the tool, with the head's quality. Armour is forged whole from plates, which are hammered out of ingots."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:iron_pickaxe"
+    }
+  ]
+}

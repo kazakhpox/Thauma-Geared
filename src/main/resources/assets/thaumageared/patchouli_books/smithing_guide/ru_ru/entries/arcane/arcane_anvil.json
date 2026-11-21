@@ -1,0 +1,13 @@
+{
+  "name": "Магическая наковальня",
+  "icon": "overgeared:tier_a_smithing_anvil",
+  "category": "thaumageared:arcane",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "overgeared:tier_a_smithing_anvil",
+      "text": "Посыпьте $(item)солью мира$() железную кузнечную наковальню, изучив $(thing)Металлургию$(). Магическая наковальня куёт всё то же, что железная, а ещё таумиум и пустотный металл."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Nether Alloys",
+  "icon": "overgeared:netherite_alloy",
+  "category": "thaumageared:metals",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(item)nether alloy furnace$() makes steel faster, and melts netherite scrap with gold into $(item)netherite alloy$(), forged like the other metals."
+    }
+  ]
+}

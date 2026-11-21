@@ -1,0 +1,21 @@
+{
+  "name": "Smithing Anvils",
+  "icon": "overgeared:iron_smithing_anvil",
+  "category": "thaumageared:basics",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Sneak and right-click $(item)stone$() with a smithing hammer to make a $(item)Stone Smithing Anvil$(); sneak and right-click a vanilla $(item)anvil$() to make an iron $(item)Smithing Anvil$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Every forging recipe has a $(thing)tier$(): stone, iron, then the tiers above iron. An anvil forges its own tier and those below it. The $(l:thaumageared:arcane/arcane_anvil)Arcane Anvil$() is the tier above iron."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "overgeared:iron_smithing_anvil",
+      "text": "Right-click with the hammer to start forging, right-click away from the anvil to stop. One anvil, one smith at a time."
+    }
+  ]
+}

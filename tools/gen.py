@@ -116,7 +116,12 @@ def main(og_jar, th_jar, resources):
                    os.path.join(data, NS), os.path.join(data, 'thaumaturge'), os.path.join(data, 'overgeared')):
         shutil.rmtree(folder, ignore_errors=True)
     files = {}
-    lang = {'en_us': {'itemGroup.thaumageared': 'Thauma-Geared'}, 'ru_ru': {'itemGroup.thaumageared': 'Thauma-Geared'}}
+    lang = {'en_us': {'itemGroup.thaumageared': 'Thauma-Geared', 'book.thaumageared.smithing_guide.name': 'Smithing Guide',
+                      'book.thaumageared.smithing_guide.landing': 'A smith\'s notes on Overgeared: hammers and anvils, forging, finishing, '
+                                                                  'metals, and the Arcane Anvil.'},
+            'ru_ru': {'itemGroup.thaumageared': 'Thauma-Geared', 'book.thaumageared.smithing_guide.name': 'Руководство кузнеца',
+                      'book.thaumageared.smithing_guide.landing': 'Записки кузнеца об Overgeared: молоты и наковальни, ковка, отделка, '
+                                                                  'металлы и Магическая наковальня.'}}
 
     def write(path, value):
         files[path] = value

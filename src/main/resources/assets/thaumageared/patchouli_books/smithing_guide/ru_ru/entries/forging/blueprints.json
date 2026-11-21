@@ -1,0 +1,24 @@
+{
+  "name": "Чертежи",
+  "icon": "overgeared:empty_blueprint",
+  "category": "thaumageared:forging",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Оголовьям инструментов нужен $(item)чертёж$() их вида (меч, кирка, топор...). Начертите его на $(item)чертёжном столе$() из пустого чертежа."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Чертёж ограничивает качество выкованного, а сам улучшается от использования: от плохого до шедевра."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:empty_blueprint"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "overgeared:drafting_table"
+    }
+  ]
+}

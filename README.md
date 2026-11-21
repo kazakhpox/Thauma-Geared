@@ -10,3 +10,5 @@ Overgeared-style smithing for Thaumaturge's thaumium and void metal (NeoForge 1.
 `tools/gen.py` generates the textures, models, names and recipes.
 
 **Hands-On Overgeared:** with it installed, the Arcane Anvil works like every other Overgeared anvil: you lay the pieces on the anvil and strike in rhythm with the hammer in your hand. No extra setup is needed.
+
+**Smithing Guide (Patchouli, optional):** a book with an iron ingot makes a guide to Overgeared's mechanics (hammers, anvils, heat and tongs, forging, quality, blueprints, polishing, quenching, assembly, steel, alloys, casting) and the Arcane Anvil, in English and Russian. `tools/gen_book.py` writes it.

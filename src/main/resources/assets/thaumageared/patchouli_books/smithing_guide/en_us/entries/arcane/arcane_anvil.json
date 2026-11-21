@@ -1,0 +1,13 @@
+{
+  "name": "The Arcane Anvil",
+  "icon": "overgeared:tier_a_smithing_anvil",
+  "category": "thaumageared:arcane",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "overgeared:tier_a_smithing_anvil",
+      "text": "Sprinkle $(item)Salis Mundus$() on an iron Smithing Anvil once you know $(thing)Metallurgy$(). The Arcane Anvil forges everything an iron one does, and thaumium and void metal."
+    }
+  ]
+}

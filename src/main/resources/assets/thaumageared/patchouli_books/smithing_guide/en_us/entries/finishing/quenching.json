@@ -1,0 +1,12 @@
+{
+  "name": "Quenching",
+  "icon": "minecraft:water_bucket",
+  "category": "thaumageared:finishing",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A forged piece comes off the anvil hot. Cool it in $(item)water$() to quench it before it is put together: an unquenched part is refused. Armour and plates need no quenching."
+    }
+  ]
+}

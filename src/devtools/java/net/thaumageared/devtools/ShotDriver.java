@@ -114,6 +114,29 @@ public final class ShotDriver {
         }));
         then("handson use", 40, ShotDriver::use);
         then("handson shot", 5, () -> shot("04_handson_station"));
+        then("close station", 20, () -> Minecraft.getInstance().setScreen(null));
+        then("book", 60, () -> {
+            try {
+                Object api = Class.forName("vazkii.patchouli.api.PatchouliAPI").getMethod("get").invoke(null);
+                api.getClass().getMethod("openBookGUI", net.minecraft.resources.ResourceLocation.class)
+                        .invoke(api, net.minecraft.resources.ResourceLocation.parse("thaumageared:smithing_guide"));
+            } catch (ReflectiveOperationException e) {
+                e.printStackTrace();
+            }
+        });
+        then("book shot", 5, () -> shot("05_book"));
+        then("book entry", 40, () -> {
+            try {
+                Object api = Class.forName("vazkii.patchouli.api.PatchouliAPI").getMethod("get").invoke(null);
+                api.getClass().getMethod("openBookEntry", net.minecraft.resources.ResourceLocation.class,
+                        net.minecraft.resources.ResourceLocation.class, int.class).invoke(api,
+                        net.minecraft.resources.ResourceLocation.parse("thaumageared:smithing_guide"),
+                        net.minecraft.resources.ResourceLocation.parse("thaumageared:finishing/assembly"), 0);
+            } catch (ReflectiveOperationException e) {
+                e.printStackTrace();
+            }
+        });
+        then("entry shot", 5, () -> shot("06_book_entry"));
         then("inv", 40, () -> Minecraft.getInstance().setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(Minecraft.getInstance().player)));
         then("inv shot", 5, () -> shot("03_items"));
         then("quit", 5, () -> Minecraft.getInstance().stop());
