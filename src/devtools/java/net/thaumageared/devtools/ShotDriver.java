@@ -43,7 +43,7 @@ import net.neoforged.neoforge.common.NeoForge;
 /**
  * Builds a flat test world, dresses the player in Knights & Heraldry armour and looks at their first-person arms (Punchy!), saving screenshots along the way to the folder in the system property {@code handson.shots}. Then quits.
  */
-@Mod("thaumageared_devtools")
+@Mod(value = "thaumageared_devtools", dist = net.neoforged.api.distmarker.Dist.CLIENT)
 public final class ShotDriver {
     private static final String WORLD = "handson_shots";
     

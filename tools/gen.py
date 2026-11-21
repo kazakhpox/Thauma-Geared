@@ -73,9 +73,9 @@ def recolour(source, palette):
 
 
 def warm(palette):
-    """A metal's palette as it glows from the forge fire."""
-    hot = (255, 130, 50)
-    return [tuple(round(a * 0.55 + b * 0.45) for a, b in zip(c, hot)) for c in palette]
+    """A metal's palette glowing a magic blue from the forge fire."""
+    hot = (90, 200, 255)
+    return [tuple(round(a * 0.5 + b * 0.5) for a, b in zip(c, hot)) for c in palette]
 
 
 def arcane_anvil(texture, model):
@@ -89,14 +89,14 @@ def arcane_anvil(texture, model):
             u0, v0, u1, v1 = face['uv']
             x0, x1 = sorted((round(u0 * scale), round(u1 * scale)))
             y0, y1 = sorted((round(v0 * scale), round(v1 * scale)))
-            if x1 - x0 < 5 or y1 - y0 < 5:
+            if x1 - x0 < 2 or y1 - y0 < 2:
                 continue
             for x in range(x0, x1):
                 for y in range(y0, y1):
                     if 0 <= x < out.width and 0 <= y < out.height and (x in (x0, x1 - 1) or y in (y0, y1 - 1)):
                         p = out.getpixel((x, y))
                         if p[3] > 0:
-                            out.putpixel((x, y), (gold[2] if x in (x0,) or y in (y0,) else gold[1]) + (255,))
+                            out.putpixel((x, y), gold[(x + y) % len(gold) if (x + y) % 5 else 2] + (255,))
     return out
 
 

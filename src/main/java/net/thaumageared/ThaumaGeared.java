@@ -43,7 +43,16 @@ public final class ThaumaGeared {
             .withTabsBefore(ResourceLocation.fromNamespaceAndPath("overgeared", "overgeared_tab"))
             .icon(() -> new ItemStack(ALL.get(1).get()))
             .title(Component.translatable("itemGroup.thaumageared"))
-            .displayItems((parameters, output) -> ALL.forEach(item -> output.accept(item.get())))
+            .displayItems((parameters, output) -> {
+                ALL.forEach(item -> output.accept(item.get()));
+                // Thaumaturge's plates and what the Arcane Anvil makes, so the whole chain is in one place.
+                for (String id : new String[]{"overgeared:tier_a_smithing_anvil", "thaumaturge:plate_thaumium", "thaumaturge:plate_void",
+                        "thaumaturge:thaumium_helm", "thaumaturge:thaumium_chest", "thaumaturge:thaumium_legs", "thaumaturge:thaumium_boots",
+                        "thaumaturge:void_helm", "thaumaturge:void_chest", "thaumaturge:void_legs", "thaumaturge:void_boots"}) {
+                    net.minecraft.core.registries.BuiltInRegistries.ITEM.getOptional(net.minecraft.resources.ResourceLocation.parse(id))
+                            .ifPresent(output::accept);
+                }
+            })
             .build());
 
     public ThaumaGeared(IEventBus modBus) {
