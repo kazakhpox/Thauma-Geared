@@ -1,0 +1,22 @@
+{
+  "type": "overgeared:forging",
+  "category": "ARMORS",
+  "hammering": 5,
+  "tier": "above_a",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "thaumaturge:plate_thaumium"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:thaumium_helm"
+  },
+  "show_notification": false,
+  "has_polishing": false,
+  "need_quenching": false
+}

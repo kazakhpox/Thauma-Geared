@@ -1,0 +1,9 @@
+{
+  "type": "overgeared:cooling",
+  "input": {
+    "item": "thaumageared:heated_thaumium_ingot"
+  },
+  "output": {
+    "id": "thaumaturge:ingot_thaumium"
+  }
+}

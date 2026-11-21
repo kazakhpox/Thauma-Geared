@@ -1,0 +1,9 @@
+{
+  "type": "overgeared:cooling",
+  "input": {
+    "item": "thaumageared:heated_void_metal_ingot"
+  },
+  "output": {
+    "id": "thaumaturge:ingot_void"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "overgeared:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "thaumageared:void_metal_pickaxe_head"
+    },
+    {
+      "tag": "c:rods/wooden"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:void_pickaxe"
+  }
+}

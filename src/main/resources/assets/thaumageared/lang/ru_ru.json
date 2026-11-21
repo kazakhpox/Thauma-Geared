@@ -1,0 +1,15 @@
+{
+  "itemGroup.thaumageared": "Thauma-Geared",
+  "item.thaumageared.heated_thaumium_ingot": "Раскалённый таумиевый слиток",
+  "item.thaumageared.thaumium_sword_blade": "Таумиевый клинок меча",
+  "item.thaumageared.thaumium_pickaxe_head": "Таумиевое оголовье кирки",
+  "item.thaumageared.thaumium_axe_head": "Таумиевое лезвие топора",
+  "item.thaumageared.thaumium_shovel_head": "Таумиевый штык лопаты",
+  "item.thaumageared.thaumium_hoe_head": "Таумиевое лезвие мотыги",
+  "item.thaumageared.heated_void_metal_ingot": "Раскалённый слиток пустотного металла",
+  "item.thaumageared.void_metal_sword_blade": "Пустотный клинок меча",
+  "item.thaumageared.void_metal_pickaxe_head": "Пустотное оголовье кирки",
+  "item.thaumageared.void_metal_axe_head": "Пустотное лезвие топора",
+  "item.thaumageared.void_metal_shovel_head": "Пустотный штык лопаты",
+  "item.thaumageared.void_metal_hoe_head": "Пустотное лезвие мотыги"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "overgeared:forging",
+  "category": "TOOL_HEADS",
+  "hammering": 6,
+  "tier": "above_a",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "thaumageared:heated_void_metal_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumageared:void_metal_sword_blade"
+  },
+  "show_notification": false,
+  "blueprint": [
+    "sword"
+  ]
+}

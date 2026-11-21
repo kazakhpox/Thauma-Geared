@@ -1,0 +1,23 @@
+{
+  "type": "overgeared:forging",
+  "category": "ARMORS",
+  "hammering": 6,
+  "tier": "above_a",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "thaumaturge:plate_void"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:void_legs"
+  },
+  "show_notification": false,
+  "has_polishing": false,
+  "need_quenching": false
+}

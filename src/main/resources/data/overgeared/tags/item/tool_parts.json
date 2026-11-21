@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "thaumageared:thaumium_sword_blade",
+    "thaumageared:thaumium_pickaxe_head",
+    "thaumageared:thaumium_axe_head",
+    "thaumageared:thaumium_shovel_head",
+    "thaumageared:thaumium_hoe_head",
+    "thaumageared:void_metal_sword_blade",
+    "thaumageared:void_metal_pickaxe_head",
+    "thaumageared:void_metal_axe_head",
+    "thaumageared:void_metal_shovel_head",
+    "thaumageared:void_metal_hoe_head"
+  ]
+}

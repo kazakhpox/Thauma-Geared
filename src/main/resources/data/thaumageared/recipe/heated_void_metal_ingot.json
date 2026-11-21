@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.0,
+  "ingredient": {
+    "tag": "c:ingots/void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumageared:heated_void_metal_ingot"
+  }
+}

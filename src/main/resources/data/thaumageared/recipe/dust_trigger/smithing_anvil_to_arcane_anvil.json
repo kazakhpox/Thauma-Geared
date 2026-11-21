@@ -1,0 +1,12 @@
+{
+  "type": "thaumaturge:dust_trigger_simple",
+  "research": {
+    "entry": "thaumaturge:metallurgy",
+    "stage": 0
+  },
+  "result": {
+    "count": 1,
+    "id": "overgeared:tier_a_smithing_anvil"
+  },
+  "target": "overgeared:iron_smithing_anvil"
+}

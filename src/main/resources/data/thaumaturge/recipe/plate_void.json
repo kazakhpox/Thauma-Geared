@@ -1,0 +1,23 @@
+{
+  "type": "overgeared:forging",
+  "category": "misc",
+  "hammering": 4,
+  "tier": "above_a",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ingots/void_metal"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:plate_void"
+  },
+  "show_notification": false,
+  "has_quality": false,
+  "needs_minigame": false,
+  "need_quenching": false,
+  "has_polishing": false
+}

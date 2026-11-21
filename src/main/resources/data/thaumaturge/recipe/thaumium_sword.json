@@ -1,0 +1,16 @@
+{
+  "type": "overgeared:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "thaumageared:thaumium_sword_blade"
+    },
+    {
+      "tag": "c:rods/wooden"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:thaumium_sword"
+  }
+}
