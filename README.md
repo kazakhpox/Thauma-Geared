@@ -8,3 +8,5 @@ Overgeared-style smithing for Thaumaturge's thaumium and void metal (NeoForge 1.
 - Thaumaturge's crafting-table recipes for these tools, armour pieces and plates are replaced.
 
 `tools/gen.py` generates the textures, models, names and recipes.
+
+**Hands-On Overgeared:** with it installed, the Arcane Anvil works like every other Overgeared anvil: you lay the pieces on the anvil and strike in rhythm with the hammer in your hand. No extra setup is needed.

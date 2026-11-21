@@ -66,6 +66,11 @@ dependencies {
     runtimeOnly "maven.modrinth:overgeared:${overgeared_version}"
     runtimeOnly "maven.modrinth:curios:${curios_version}"
     runtimeOnly "maven.modrinth:lithostitched:1.8.0-neoforge-21.1"
+    // Hands-On Overgeared (optional, dev test only): its jar at libs/handson_overgeared.jar, with Diegesis.
+    if (file('libs/handson_overgeared.jar').exists()) {
+        runtimeOnly files('libs/handson_overgeared.jar')
+        runtimeOnly "maven.modrinth:diegesis-api:gc2Jh01U"
+    }
     if (file('libs/thaumaturge.jar').exists()) {
         runtimeOnly files('libs/thaumaturge.jar')
     }

@@ -107,6 +107,13 @@ public final class ShotDriver {
         then("after", 5, () -> shot("01_after_dust"));
         then("close", 30, () -> server(player -> player.teleportTo(player.serverLevel(), 2.5, -59.3, 1.6, 0.0F, 35.0F)));
         then("close shot", 5, () -> shot("02_arcane_close"));
+        then("handson look", 40, () -> server(player -> {
+            player.getInventory().setItem(4, ItemStack.EMPTY);
+            player.getInventory().setItem(0, item("overgeared:iron_hammer"));
+            player.teleportTo(player.serverLevel(), 0.5, -59, 1.9, 0.0F, 38.0F);
+        }));
+        then("handson use", 40, ShotDriver::use);
+        then("handson shot", 5, () -> shot("04_handson_station"));
         then("inv", 40, () -> Minecraft.getInstance().setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(Minecraft.getInstance().player)));
         then("inv shot", 5, () -> shot("03_items"));
         then("quit", 5, () -> Minecraft.getInstance().stop());
