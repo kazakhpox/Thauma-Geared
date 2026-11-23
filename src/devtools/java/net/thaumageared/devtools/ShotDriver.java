@@ -97,6 +97,18 @@ public final class ShotDriver {
             player.getInventory().selected = 7;
             player.teleportTo(level, 0.5, -59, -0.5, 0.0F, 30.0F);
         }));
+        then("furnace", 20, () -> server(player -> {
+            BlockPos at = new BlockPos(4, -60, 3);
+            player.serverLevel().setBlockAndUpdate(at, block("overgeared:nether_alloy_furnace"));
+            var be = (net.minecraft.world.Container) player.serverLevel().getBlockEntity(at);
+            be.setItem(0, item("thaumaturge:ingot_void"));
+            try {
+                Object recipe = be.getClass().getMethod("getCurrentRecipe").invoke(be);
+                System.out.println("[shots] nether furnace with void ingot: " + recipe);
+            } catch (ReflectiveOperationException e) {
+                e.printStackTrace();
+            }
+        }));
         then("before", 5, () -> shot("00_before"));
         then("dust", 60, () -> server(player -> {
             var hit = new net.minecraft.world.phys.BlockHitResult(new Vec3(0.5, -59, 3.5), Direction.UP, new BlockPos(0, -60, 3), false);

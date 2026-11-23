@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Heat thaumium and void metal ingots in a blast furnace: they glow blue. Forge them into heads with the iron patterns and blueprints, polish, quench, and put on a stick."
+      "text": "Magic metal will not heat in a common fire: put thaumium and void metal ingots in a $(item)nether alloy furnace$(), one at a time, and they come out glowing blue. Forge them into heads with the iron patterns and blueprints, polish, quench, and put on a stick."
     },
     {
       "type": "patchouli:text",

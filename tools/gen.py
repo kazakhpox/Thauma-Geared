@@ -3,7 +3,7 @@
 Writes Thauma-Geared's assets and data: the textures (recoloured from Overgeared's own iron ones and Thaumaturge's metals), the
 item models and names, the Arcane Anvil's look, and the recipes.
 
-Usage: gen.py <overgeared jar> <thaumaturge jar> <resources dir>
+Usage: gen.py <overgeared jar> <thaumaturge jar> <resources dir> [minecraft client jar]
 
 The Arcane Anvil is Overgeared's Tier A smithing anvil (a tier above iron that Overgeared ships for modpacks to fill): its model
 is pointed at a dark purple texture with a gold rim, its name changed, and Thaumaturge's Salis Mundus makes it from an Overgeared
@@ -72,16 +72,17 @@ def recolour(source, palette):
     return out
 
 
-def warm(palette):
-    """A metal's palette glowing a magic blue from the forge fire."""
-    hot = (90, 200, 255)
-    return [tuple(round(a * 0.5 + b * 0.5) for a, b in zip(c, hot)) for c in palette]
+# Metal heated past white-hot into blue: deep blue in the shadows, bright cyan and almost white on the highlights.
+GLOW = {
+    'thaumium': [(14, 60, 160), (22, 95, 215), (35, 135, 245), (60, 175, 255), (110, 210, 255), (190, 240, 255)],
+    'void_metal': [(20, 22, 130), (30, 55, 200), (40, 95, 240), (65, 140, 255), (110, 185, 255), (180, 225, 255)],
+}
 
 
-def arcane_anvil(texture, model):
-    """Overgeared's anvil in dark purple, every face of the model rimmed with gold."""
+def arcane_anvil(texture, model, gold_ingot):
+    """Overgeared's anvil in dark purple, every face of the model rimmed with gold shaded as Minecraft's gold ingot is."""
     purple = [(22, 10, 34), (34, 16, 52), (46, 22, 68), (58, 30, 84), (72, 40, 100), (88, 52, 118)]
-    gold = [(150, 100, 20), (196, 146, 34), (236, 196, 64)]
+    gold = recolour(texture, [c for c in palette_of(gold_ingot) if c[2] < 150])  # its pale-white glints left out
     out = recolour(texture, purple)
     scale = texture.width / 16.0  # the model's UVs are on the 16 grid, its texture 64 wide
     for element in model['elements']:
@@ -96,7 +97,7 @@ def arcane_anvil(texture, model):
                     if 0 <= x < out.width and 0 <= y < out.height and (x in (x0, x1 - 1) or y in (y0, y1 - 1)):
                         p = out.getpixel((x, y))
                         if p[3] > 0:
-                            out.putpixel((x, y), gold[(x + y) % len(gold) if (x + y) % 5 else 2] + (255,))
+                            out.putpixel((x, y), gold.getpixel((x, y)))
     return out
 
 
@@ -107,7 +108,8 @@ def forging(pattern, key, result, hammering, category, extra=None):
     return recipe
 
 
-def main(og_jar, th_jar, resources):
+def main(og_jar, th_jar, resources, mc_jar='/root/.gradle/caches/neoformruntime/artifacts/minecraft_1.21.1_client.jar'):
+    mc = zipfile.ZipFile(mc_jar)
     og = zipfile.ZipFile(og_jar)
     th = zipfile.ZipFile(th_jar)
     assets = os.path.join(resources, 'assets')
@@ -130,7 +132,7 @@ def main(og_jar, th_jar, resources):
     for metal, info in METALS.items():
         palette = palette_of(read_image(th, 'assets/thaumaturge/textures/item/' + info['ingot'].split(':')[1] + '.png'))
         textures['heated_%s_ingot' % metal] = recolour(read_image(og, 'assets/overgeared/textures/item/heated_iron_ingot.png'),
-                                                       warm(palette))
+                                                       GLOW[metal])
         lang['en_us']['item.%s.heated_%s_ingot' % (NS, metal)] = 'Heated %s Ingot' % info['en']
         lang['ru_ru']['item.%s.heated_%s_ingot' % (NS, metal)] = 'Раскалённый ' + info['ru_ingot']
         for head, (_, _, en, ru) in HEADS.items():
@@ -151,7 +153,8 @@ def main(og_jar, th_jar, resources):
     # The Arcane Anvil: Overgeared's Tier A anvil, its model on the purple and gold texture, its name.
     model = json.loads(og.read('assets/overgeared/models/block/tier_a_smithing_anvil.json'))
     write('assets/%s/textures/block/arcane_anvil.png' % NS,
-          arcane_anvil(read_image(og, 'assets/overgeared/textures/block/smithing_anvil.png'), model))
+          arcane_anvil(read_image(og, 'assets/overgeared/textures/block/smithing_anvil.png'), model,
+                       read_image(mc, 'assets/minecraft/textures/item/gold_ingot.png')))
     model['textures'] = {'0': NS + ':block/arcane_anvil', 'particle': NS + ':block/arcane_anvil'}
     write('assets/overgeared/models/block/tier_a_smithing_anvil.json', model)
     overgeared_lang = {
@@ -175,10 +178,10 @@ def main(og_jar, th_jar, resources):
     for metal, info in METALS.items():
         hot = '%s:heated_%s_ingot' % (NS, metal)
         heated.append(hot)
-        # Heated in a blast furnace as Overgeared's metals are; cooled back in water.
+        # Magic metal takes no common fire: it is heated in Overgeared's nether alloy furnace; cooled back in water.
         write('data/%s/recipe/heated_%s_ingot.json' % (NS, metal), {
-            'type': 'minecraft:blasting', 'category': 'misc', 'cookingtime': 100, 'experience': 0.0,
-            'ingredient': {'tag': info['tag']}, 'result': {'count': 1, 'id': hot}})
+            'type': OG + 'nether_alloy_smelting', 'category': 'misc', 'group': 'misc', 'cookingtime': 200, 'experience': 0.5,
+            'ingredients': [{'tag': info['tag']}], 'result': {'count': 1, 'id': hot}})
         write('data/%s/recipe/%s_ingot_from_cooling.json' % (NS, metal), {
             'type': OG + 'cooling', 'input': {'item': hot}, 'output': {'id': info['ingot']}})
         # The metal's plates, hammered out of a cold ingot on the Arcane Anvil (replacing Thaumaturge's crafting).
@@ -218,4 +221,4 @@ def main(og_jar, th_jar, resources):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:5])

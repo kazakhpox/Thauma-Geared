@@ -1,11 +1,14 @@
 {
-  "type": "minecraft:blasting",
+  "type": "overgeared:nether_alloy_smelting",
   "category": "misc",
-  "cookingtime": 100,
-  "experience": 0.0,
-  "ingredient": {
-    "tag": "c:ingots/thaumium"
-  },
+  "group": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "tag": "c:ingots/thaumium"
+    }
+  ],
   "result": {
     "count": 1,
     "id": "thaumageared:heated_thaumium_ingot"
