@@ -1,14 +1,11 @@
 {
-  "type": "overgeared:nether_alloy_smelting",
+  "type": "thaumageared:infernal_heating",
   "category": "misc",
-  "group": "misc",
-  "cookingtime": 200,
+  "cookingtime": 100,
   "experience": 0.5,
-  "ingredients": [
-    {
-      "tag": "c:ingots/thaumium"
-    }
-  ],
+  "ingredient": {
+    "tag": "c:ingots/thaumium"
+  },
   "result": {
     "count": 1,
     "id": "thaumageared:heated_thaumium_ingot"

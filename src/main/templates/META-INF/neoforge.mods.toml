@@ -37,3 +37,6 @@ logoFile=""
     versionRange="${thaumaturge_version_range}"
     ordering="AFTER"
     side="BOTH"
+
+[[mixins]]
+config = "thaumageared.mixins.json"

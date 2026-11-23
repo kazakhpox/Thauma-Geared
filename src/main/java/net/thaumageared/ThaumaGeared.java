@@ -55,8 +55,14 @@ public final class ThaumaGeared {
             })
             .build());
 
+    public static ResourceLocation id(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
     public ThaumaGeared(IEventBus modBus) {
         ITEMS.register(modBus);
         TABS.register(modBus);
+        InfernalHeatingRecipe.TYPES.register(modBus);
+        InfernalHeatingRecipe.SERIALIZERS.register(modBus);
     }
 }

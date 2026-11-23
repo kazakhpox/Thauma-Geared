@@ -99,15 +99,23 @@ public final class ShotDriver {
         }));
         then("furnace", 20, () -> server(player -> {
             BlockPos at = new BlockPos(4, -60, 3);
-            player.serverLevel().setBlockAndUpdate(at, block("overgeared:nether_alloy_furnace"));
-            var be = (net.minecraft.world.Container) player.serverLevel().getBlockEntity(at);
-            be.setItem(0, item("thaumaturge:ingot_void"));
+            ServerLevel level = player.serverLevel();
+            level.setBlockAndUpdate(at, block("thaumaturge:infernal_furnace"));
+            Object be = level.getBlockEntity(at);
+            System.out.println("[shots] infernal furnace block entity: " + be);
             try {
-                Object recipe = be.getClass().getMethod("getCurrentRecipe").invoke(be);
-                System.out.println("[shots] nether furnace with void ingot: " + recipe);
+                var method = be.getClass().getDeclaredMethod("getCookingRecipe", ItemStack.class);
+                method.setAccessible(true);
+                System.out.println("[shots] infernal furnace with void ingot: " + method.invoke(be, item("thaumaturge:ingot_void")));
+                System.out.println("[shots] infernal furnace with iron ore: " + method.invoke(be, item("minecraft:raw_iron")));
             } catch (ReflectiveOperationException e) {
                 e.printStackTrace();
             }
+            var input = new net.minecraft.world.item.crafting.SingleRecipeInput(item("thaumaturge:ingot_void"));
+            System.out.println("[shots] common furnace with void ingot: " + level.getRecipeManager()
+                    .getRecipeFor(net.minecraft.world.item.crafting.RecipeType.SMELTING, input, level).isPresent()
+                    + ", blast furnace: " + level.getRecipeManager()
+                    .getRecipeFor(net.minecraft.world.item.crafting.RecipeType.BLASTING, input, level).isPresent());
         }));
         then("before", 5, () -> shot("00_before"));
         then("dust", 60, () -> server(player -> {

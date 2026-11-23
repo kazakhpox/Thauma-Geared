@@ -193,12 +193,12 @@ ENTRIES = {
                  '$(thing)Металлургию$(). Магическая наковальня куёт всё то же, что железная, а ещё таумиум и пустотный металл.')])}),
     'magic_metals': ('arcane', 'thaumageared:heated_thaumium_ingot', 1, {
         'en_us': ('Thaumium and Void Metal', [
-            text('Magic metal will not heat in a common fire: put thaumium and void metal ingots in a $(item)nether alloy furnace$(), one at a time, and they come out glowing blue. Forge them into heads with the iron patterns and '
+            text('Magic metal will not heat in a common fire: only Thaumaturge\'s $(item)Infernal Furnace$() heats thaumium and void metal ingots, and they come out glowing blue. Forge them into heads with the iron patterns and '
                  'blueprints, polish, quench, and put on a stick.'),
             text('Plates: one cold ingot each. Armour from plates: helmet 5, chestplate 8, leggings 7, boots 4, in the steel armour '
                  'patterns. These replace Thaumaturge\'s crafting-table recipes.')]),
         'ru_ru': ('Таумиум и пустотный металл', [
-            text('Магический металл не берёт обычный огонь: раскаляйте слитки таумиума и пустотного металла в $(item)незерской плавильне$(), по одному, — они выходят светящимися голубым. Куйте из них оголовья по железным '
+            text('Магический металл не берёт обычный огонь: раскаляйте слитки таумиума и пустотного металла в $(item)адской печи$() Thaumaturge — они выходят светящимися голубым. Куйте из них оголовья по железным '
                  'схемам и чертежам, полируйте, закаляйте и насаживайте на палку.'),
             text('Пластины: по одной из холодного слитка. Броня из пластин: шлем 5, нагрудник 8, поножи 7, ботинки 4, по схемам стальной '
                  'брони. Эти рецепты заменяют верстачные рецепты Thaumaturge.')])}),

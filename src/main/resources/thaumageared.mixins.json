@@ -1,0 +1,8 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "net.thaumageared.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["InfernalFurnaceMixin"],
+  "injectors": {"defaultRequire": 1}
+}

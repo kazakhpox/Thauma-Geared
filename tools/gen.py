@@ -178,10 +178,10 @@ def main(og_jar, th_jar, resources, mc_jar='/root/.gradle/caches/neoformruntime/
     for metal, info in METALS.items():
         hot = '%s:heated_%s_ingot' % (NS, metal)
         heated.append(hot)
-        # Magic metal takes no common fire: it is heated in Overgeared's nether alloy furnace; cooled back in water.
+        # Magic metal takes no common fire: only Thaumaturge's Infernal Furnace heats it; cooled back in water.
         write('data/%s/recipe/heated_%s_ingot.json' % (NS, metal), {
-            'type': OG + 'nether_alloy_smelting', 'category': 'misc', 'group': 'misc', 'cookingtime': 200, 'experience': 0.5,
-            'ingredients': [{'tag': info['tag']}], 'result': {'count': 1, 'id': hot}})
+            'type': NS + ':infernal_heating', 'category': 'misc', 'cookingtime': 100, 'experience': 0.5,
+            'ingredient': {'tag': info['tag']}, 'result': {'count': 1, 'id': hot}})
         write('data/%s/recipe/%s_ingot_from_cooling.json' % (NS, metal), {
             'type': OG + 'cooling', 'input': {'item': hot}, 'output': {'id': info['ingot']}})
         # The metal's plates, hammered out of a cold ingot on the Arcane Anvil (replacing Thaumaturge's crafting).
